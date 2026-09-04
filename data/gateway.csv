@@ -1,0 +1,141 @@
+gateway_ref,order_reference,amount,currency,captured_at,status,description
+GW-0000001,ord-0001,841.70,INR,2026-06-03 00:48:11,captured,Mobile wallet top-up
+GW-0000002,ORD-0002,4425.27,EUR,2026-06-21 19:34:49,captured,Hotel pre-authorization capture
+GW-0000003,ORD-0003,3152.69,GBP,2026-08-03 08:56:53,captured,Card checkout — online store
+GW-0000004,ORD-0004,316.19,EUR,2026-08-12 23:31:52,captured,Monthly SaaS subscription
+GW-0000005,ORD-0005,685.64,INR,2026-08-11 19:55:38,captured,Invoice payment
+GW-0000006,ORD-0006,4882.68,EUR,2026-07-12 03:23:28,captured,Utility bill payment
+GW-0000007,ORD-0007,2379.58,USD,2026-07-04 00:01:37,captured,Marketplace payout capture
+GW-0000008,ORD-0008,3097.62,EUR,2026-06-01 22:03:14,captured,Monthly SaaS subscription
+GW-0000009,ORD-0009,4519.46,GBP,2026-06-12 04:31:13,captured,Marketplace payout capture
+GW-0000010,ORD-0010,3804.95,INR,2026-07-02 20:12:06,captured,Insurance premium debit
+GW-0000011,ORD-0011,2233.27,INR,2026-07-30 21:41:06,captured,Card checkout — online store
+GW-0000012,ORD-0012,3830.43,GBP,2026-06-14 19:34:28,captured,Marketplace payout capture
+GW-0000013,ORD-0013,974.50,ZZZ,2026-07-31 20:28:51,UNKNOWN,Marketplace payout capture
+GW-0000014,ORD-0014,525.82,USD,2026-08-10 00:59:48,captured,Card checkout — online store
+GW-0000015,ORD-0015,2143.28,INR,2026-08-02 00:57:03,captured,Marketplace payout capture
+GW-0000016,ORD-0016,23.80,INR,2026-07-06 01:44:46,captured,Insurance premium debit
+GW-0000017,ORD-0017,824.58,EUR,2026-07-09 18:37:47,captured,Marketplace payout capture
+GW-0000018,ORD-0018,275.39,INR,2026-08-05 03:05:54,captured,Invoice payment
+GW-0000019,ORD-0019,3132.19,USD,2026-07-01 19:15:37,captured,Utility bill payment
+GW-0000020,ORD-0020,2210.44,GBP,2026-07-05 11:20:15,captured,Marketplace payout capture
+GW-0000021,ORD-0021,698.67,GBP,2026-07-29 20:59:04,captured,Hotel pre-authorization capture
+GW-0000022,ORD-0022,0.00,USD,2026-06-11 10:08:59,UNKNOWN,Marketplace payout capture
+GW-0000023,ORD-0023,4630.76,USD,2026-07-03 20:28:53,captured,Hotel pre-authorization capture
+GW-0000024,ORD-0024,3219.45,USD,2026-08-11 02:06:56,captured,Mobile wallet top-up
+GW-0000025,ORD-0025,617.67,USD,2026-08-11 09:38:13,captured,Invoice payment
+GW-0000026,ORD-0026,3616.96,GBP,2026-08-05 11:05:40,captured,Insurance premium debit
+GW-0000027,ORD-0027,243.64,USD,2026-07-14 16:10:47,captured,Invoice payment
+GW-0000028,ORD-0029,4642.52,EUR,2026-08-09 22:37:35,captured,Card checkout — online store
+GW-0000029,ORD-0030,680.68,USD,2026-07-11 18:55:02,captured,Hotel pre-authorization capture
+GW-0000030,ord:0031,3588.49,EUR,2026-06-15 18:56:55,captured,Hotel pre-authorization capture
+GW-0000031,ORD-0032,4866.16,EUR,2026-06-22 11:01:11,captured,Invoice payment
+GW-0000032,ORD-0033,4218.52,EUR,2026-07-05 21:06:24,captured,Invoice payment
+GW-0000033,ORD-0034,4514.00,INR,2026-06-30 05:22:19,captured,Marketplace payout capture
+GW-0000034,ORD-0035,136.56,EUR,2026-07-23 07:49:17,captured,Hotel pre-authorization capture
+GW-0000035,ORD-0036,4435.71,GBP,2026-06-05 04:11:37,captured,Monthly SaaS subscription
+GW-0000036,ORD-0037,580.84,INR,2026-07-16 17:32:07,captured,Hotel pre-authorization capture
+GW-0000037,ORD-0038,1348.97,USD,2026-07-27 08:34:43,captured,Card checkout — online store
+GW-0000038,ORD-0039,3279.62,GBP,2026-06-17 08:42:26,captured,Mobile wallet top-up
+GW-0000039,ORD-0040,3667.88,GBP,2026-08-11 01:42:24,captured,Invoice payment
+GW-0000040,ORD-0041,2141.50,USD,2026-07-10 10:50:37,captured,Mobile wallet top-up
+GW-0000041,ORD-0042,2328.73,INR,2026-06-29 01:47:10,captured,Insurance premium debit
+GW-0000042,ORD-0043,2714.95,GBP,2026-06-13 00:14:51,captured,Marketplace payout capture
+GW-0000043,ORD-0044,785.05,USD,2026-06-06 21:54:49,captured,Marketplace payout capture
+GW-0000044,ORD-0045,2185.36,EUR,2026-07-20 11:09:41,captured,Insurance premium debit
+GW-0000045,ORD-0047,3661.08,INR,2026-06-08 14:29:08,captured,Marketplace payout capture
+GW-0000046,ORD-0048,4993.44,INR,2026-08-05 02:28:57,captured,Utility bill payment
+GW-0000047,ORD-0049,2372.16,GBP,2026-07-03 11:33:31,captured,Mobile wallet top-up
+GW-0000048,ORD-0050,2318.69,USD,2026-07-08 23:20:57,captured,Marketplace payout capture
+GW-0000049,ORD-0051,803.28,EUR,2026-07-21 13:04:26,captured,Invoice payment
+GW-0000050,ORD-0052,2857.34,INR,2026-07-24 15:24:57,captured,Card checkout — online store
+GW-0000051,ORD-0053,4504.24,INR,2026-08-02 13:19:48,captured,Card checkout — online store
+GW-0000052,ORD-0054,2834.32,EUR,2026-08-03 14:31:01,captured,Marketplace payout capture
+GW-0000053,ORD-0055,1774.78,INR,2026-06-22 11:39:34,captured,Insurance premium debit
+GW-0000054,ORD-0056,3115.72,USD,2026-06-12 07:11:03,captured,Utility bill payment
+GW-0000055,ORD-0057,1728.77,EUR,2026-07-30 13:56:24,captured,Hotel pre-authorization capture
+GW-0000056,ORD-0058,1335.12,USD,2026-08-01 06:03:22,captured,Card checkout — online store
+GW-0000057,ORD-0059,3421.12,USD,2026-06-06 12:12:53,captured,Card checkout — online store
+GW-0000058,ORD-0060,1263.16,EUR,2026-08-01 03:29:44,captured,Monthly SaaS subscription
+GW-0000059,ORD-0062,3046.47,USD,2026-07-11 10:12:04,captured,Utility bill payment
+GW-0000060,ORD-0063,3667.79,GBP,2026-06-17 15:27:42,captured,Card checkout — online store
+GW-0000061,ORD-0064,2665.19,GBP,2026-06-03 14:06:27,captured,Utility bill payment
+GW-0000062,ORD-0065,3722.08,EUR,2026-07-28 02:41:17,captured,Invoice payment
+GW-0000063,ORD-0066,1702.30,EUR,2026-06-13 20:15:48,captured,Mobile wallet top-up
+GW-0000064,ORD-0067,3212.39,INR,2026-07-15 02:11:31,captured,Card checkout — online store
+GW-0000065,ORD-0068,1796.85,GBP,2026-07-07 13:05:15,captured,Card checkout — online store
+GW-0000066,ORD-0069,2923.97,EUR,2026-08-01 14:01:05,captured,Insurance premium debit
+GW-0000067,ORD-0070,1617.90,GBP,2026-08-01 17:35:21,captured,Hotel pre-authorization capture
+GW-0000068,ORD-0071,1432.88,GBP,2026-07-04 02:12:20,captured,Marketplace payout capture
+GW-0000069,ORD-0072,1016.72,EUR,2026-08-02 11:48:33,captured,Mobile wallet top-up
+GW-0000070,ORD0073,4377.87,EUR,2026-07-09 20:19:00,captured,Marketplace payout capture
+GW-0000071,ORD-0075,4962.24,EUR,2026-08-03 14:36:18,captured,Monthly SaaS subscription
+GW-0000072,ORD-0076,2321.82,GBP,2026-06-24 19:07:52,captured,Card checkout — online store
+GW-0000073,ORD-0077,2113.86,INR,2026-06-11 05:51:36,captured,Card checkout — online store
+GW-0000074,ORD-0078,2939.40,INR,2026-06-30 18:19:55,captured,Utility bill payment
+GW-0000075,ORD-0079,3208.72,USD,2026-06-28 09:05:10,captured,Marketplace payout capture
+GW-0000076,ORD-0080,924.78,USD,2026-06-22 21:44:38,captured,Card checkout — online store
+GW-0000077,ORD-0082,1236.31,GBP,2026-08-15 18:34:14,captured,Marketplace payout capture
+GW-0000078,ORD-0083,4347.42,EUR,2026-06-12 08:19:38,captured,Card checkout — online store
+GW-0000079,ORD-0085,2843.55,INR,2026-07-28 04:56:27,captured,Monthly SaaS subscription
+GW-0000080,ORD-0086,148.10,USD,2026-07-02 06:52:17,captured,Card checkout — online store
+GW-0000081, ORD-0088 ,1470.84,EUR,2026-08-15 13:05:30,captured,Utility bill payment
+GW-0000082,ORD-0089,1695.76,USD,2026-06-22 20:31:18,captured,Hotel pre-authorization capture
+GW-0000083,ORD-0090,2397.09,USD,2026-07-12 17:49:25,captured,Mobile wallet top-up
+GW-0000084,ORD-0091,3460.53,INR,2026-07-24 23:23:39,captured,Card checkout — online store
+GW-0000085,ORD-0092,3997.03,USD,2026-06-28 14:59:18,captured,Mobile wallet top-up
+GW-0000086,ORD-0093,649.12,USD,2026-07-02 18:00:35,captured,Invoice payment
+GW-0000087,ORD-0094,1190.57,USD,2026-07-31 04:31:59,captured,Monthly SaaS subscription
+GW-0000088,ORD-0095,2190.86, ,2026-08-01 04:09:24,UNKNOWN,Marketplace payout capture
+GW-0000089,ORD-0096,4845.74,EUR,2026-06-10 17:54:26,captured,Mobile wallet top-up
+GW-0000090,ORD-0097,4314.54,USD,2026-07-09 00:37:42,captured,Mobile wallet top-up
+GW-0000091,ORD-0098,2353.69,INR,2026-07-17 01:34:24,captured,Hotel pre-authorization capture
+GW-0000092,ORD-0099,4571.71,EUR,2026-07-02 16:26:02,captured,Utility bill payment
+GW-0000093,ORD-0100,3709.92,INR,2026-07-21 05:08:32,captured,Invoice payment
+GW-0000094,ORD-0101,4596.27,INR,2026-06-14 04:09:26,captured,Insurance premium debit
+GW-0000095,ORD-0102,1787.53,INR,2026-06-12 18:54:34,captured,Hotel pre-authorization capture
+GW-0000096,ORD-0103,3298.73,INR,2026-08-10 03:15:40,captured,Card checkout — online store
+GW-0000097,ORD-0104,3927.70,USD,2026-07-27 00:45:55,captured,Monthly SaaS subscription
+GW-0000098,ORD-0105,884.73,GBP,2026-06-05 18:03:18,captured,Card checkout — online store
+GW-0000099,ORD-0106,2270.53,EUR,2026-07-03 04:50:11,captured,Utility bill payment
+GW-0000100,ORD-0107,426.52,INR,2026-07-02 22:09:14,captured,Insurance premium debit
+GW-0000101,ORD-0108,2421.97,GBP,2026-06-02 22:43:34,captured,Insurance premium debit
+GW-0000102,ORD-0109,2328.43,GBP,2026-08-16 19:44:16,captured,Mobile wallet top-up
+GW-0000103,ORD-0110,1056.97,INR,2026-08-03 02:36:22,captured,Monthly SaaS subscription
+GW-0000104,ORD-0111,3678.73,GBP,2026-06-03 11:36:55,captured,Utility bill payment
+GW-0000105,ORD-0112,4786.75,INR,2026-07-08 08:22:14,captured,Marketplace payout capture
+GW-0000106,ORD-0113,3973.90,EUR,2026-06-14 19:28:02,captured,Card checkout — online store
+GW-0000107,ORD-0114,485.05,GBP,2026-07-13 21:08:50,captured,Utility bill payment
+GW-0000108,ORD-0115,2795.69,GBP,2026-06-23 12:51:18,captured,Mobile wallet top-up
+GW-0000109,ORD-0116,407.28,EUR,2026-06-30 01:35:23,captured,Utility bill payment
+GW-0000110,ORD-0117,85.47,GBP,2026-08-09 05:43:47,captured,Monthly SaaS subscription
+GW-0000111,ORD-0118,4324.33,GBP,2026-06-15 19:39:56,captured,Marketplace payout capture
+GW-0000112,ORD-0119,4811.07,EUR,2026-06-10 21:19:41,captured,Insurance premium debit
+GW-0000113,ORD-0120,745.33,USD,2026-06-06 19:06:15,captured,Mobile wallet top-up
+GW-0000114,ORD-0121,2391.39,GBP,2026-08-10 21:46:09,captured,Utility bill payment
+GW-0000115,ORD-0122,4935.84,GBP,2026-06-06 14:28:15,captured,Hotel pre-authorization capture
+GW-0000116,ORD-0123,3607.43,GBP,2026-08-09 21:17:12,captured,Hotel pre-authorization capture
+GW-0000117,ord-0125,3365.28,USD,2026-06-07 23:50:36,captured,Hotel pre-authorization capture
+GW-0000118,ORD-0126,3086.83,EUR,2026-06-30 10:50:57,captured,Hotel pre-authorization capture
+GW-0000119,ORD0127,4513.02,EUR,2026-06-17 11:07:42,captured,Mobile wallet top-up
+GW-0000120,ORD-0128,1890.72,EUR,2026-08-15 18:16:03,captured,Hotel pre-authorization capture
+GW-0000121,ORD-0130,4091.54,GBP,2026-08-05 18:14:39,captured,Monthly SaaS subscription
+GW-0000122,ORD-0131,2413.96, ,2026-06-08 20:27:43,UNKNOWN,Insurance premium debit
+GW-0000123,ORD-0132,2582.92,INR,2026-06-11 01:09:04,captured,Monthly SaaS subscription
+GW-0000124,ORD-0133,3285.72,GBP,2026-07-19 22:38:27,captured,Mobile wallet top-up
+GW-0000125,ORD-0134,4483.58,EUR,2026-07-27 16:26:21,captured,Insurance premium debit
+GW-0000126,ORD-0135,2193.48,USD,2026-07-12 03:16:23,captured,Utility bill payment
+GW-0000127,ORD-0136,364.47,USD,2026-06-12 08:47:47,captured,Monthly SaaS subscription
+GW-0000128,ORD-0137,2929.48,USD,2026-08-16 12:26:22,captured,Hotel pre-authorization capture
+GW-0000129,ORD-0139,2672.80,EUR,2026-06-21 20:22:54,captured,Insurance premium debit
+GW-0000130,ORD-0140,614.82,GBP,2026-08-15 01:54:35,captured,Marketplace payout capture
+GW-0000131,ORD-0141,3205.38,GBP,2026-06-05 16:48:19,captured,Invoice payment
+GW-0000132,ORD-0142,44.51,EUR,2026-06-19 11:47:40,captured,Utility bill payment
+GW-0000133,ORD-0143,3924.27,EUR,2026-07-20 08:10:23,captured,Utility bill payment
+GW-0000134,ORD-0144,4085.35,USD,2026-06-08 01:39:03,captured,Invoice payment
+GW-0000135,ORD-0145,2335.68,INR,2026-08-03 20:13:48,captured,Insurance premium debit
+GW-0000136,ORD-0146,1822.19,INR,2026-06-17 03:37:31,captured,Mobile wallet top-up
+GW-0000137,INV-8841,250.61,EUR,2026-07-21 19:19:13,captured,Card checkout — online store
+GW-0000138,INV-8841,1530.03,GBP,2026-06-17 03:27:11,captured,Card checkout — online store
+GW-0000139,INV-2260,2804.76,EUR,2026-08-04 16:55:47,captured,Hotel pre-authorization capture
+GW-0000140,INV-2260,110.75,INR,2026-06-11 16:36:25,captured,Hotel pre-authorization capture

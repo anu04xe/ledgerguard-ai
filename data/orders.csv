@@ -1,0 +1,151 @@
+order_id,customer_id,amount,currency,order_date,description
+ORD-0001,CUST-8961,841.70,INR,2026-06-01,Mobile wallet top-up
+ORD-0002,CUST-7246,4425.27,EUR,2026-06-20,Hotel pre-authorization capture
+ORD-0003,CUST-1916,3152.69,GBP,2026-08-02,Card checkout — online store
+ORD-0004,CUST-1701,316.19,EUR,2026-08-12,Monthly SaaS subscription
+ORD-0005,CUST-3171,685.64,INR,2026-08-10,Invoice payment
+ORD-0006,CUST-6502,4882.68,EUR,2026-07-10,Utility bill payment
+ORD-0007,CUST-1524,2379.58,USD,2026-07-02,Marketplace payout capture
+ORD-0008,CUST-6798,3097.62,EUR,2026-06-01,Monthly SaaS subscription
+ORD-0009,CUST-3281,4519.46,GBP,2026-06-10,Marketplace payout capture
+ORD-0010,CUST-7615,3804.95,INR,2026-07-02,Insurance premium debit
+ORD-0011,CUST-6516,2233.27,INR,2026-07-30,Card checkout — online store
+ORD-0012,CUST-2569,3830.43,GBP,2026-06-14,Marketplace payout capture
+ORD-0013,CUST-8163,974.50,ZZZ,2026-07-30,Marketplace payout capture
+ORD-0014,CUST-8938,525.82,USD,2026-08-09,Card checkout — online store
+ORD-0015,CUST-8083,2143.28,INR,2026-08-01,Marketplace payout capture
+ORD-0016,CUST-3336,23.80,INR,2026-07-04,Insurance premium debit
+ORD-0017,CUST-8935,824.08,EUR,2026-07-08,Marketplace payout capture
+ORD-0018,CUST-1465,275.39,INR,2026-08-04,Invoice payment
+ORD-0019,CUST-1982,3132.19,USD,2026-07-01,Utility bill payment
+ORD-0020,CUST-6486,2210.44,GBP,2026-07-04,Marketplace payout capture
+ORD-0021,CUST-8610,698.67,GBP,2026-07-29,Hotel pre-authorization capture
+ORD-0022,CUST-5144,0.00,USD,2026-06-10,Marketplace payout capture
+ORD-0023,CUST-3334,4630.76,USD,2026-07-02,Hotel pre-authorization capture
+ORD-0024,CUST-8632,3219.45,USD,2026-08-10,Mobile wallet top-up
+ORD-0025,CUST-3231,617.67,USD,2026-08-10,Invoice payment
+ORD-0026,CUST-3057,3616.96,GBP,2026-08-04,Insurance premium debit
+ORD-0027,CUST-6219,243.64,USD,2026-07-13,Invoice payment
+ORD-0028,CUST-8741,2953.26,USD,2026-06-15,Monthly SaaS subscription
+ORD-0029,CUST-7837,4642.52,EUR,2026-08-09,Card checkout — online store
+ORD-0030,CUST-8364,680.68,USD,2026-07-10,Hotel pre-authorization capture
+ORD-0031,CUST-7390,3588.49,EUR,2026-06-14,Hotel pre-authorization capture
+ORD-0032,CUST-8220,4866.16,EUR,2026-06-21,Invoice payment
+ORD-0033,CUST-7450,4218.52,EUR,2026-07-05,Invoice payment
+ORD-0034,CUST-7689,4514.00,INR,2026-06-29,Marketplace payout capture
+ORD-0035,CUST-3282,136.56,EUR,2026-07-22,Hotel pre-authorization capture
+ORD-0036,CUST-8184,4435.71,GBP,2026-06-04,Monthly SaaS subscription
+ORD-0037,CUST-4574,580.84,INR,2026-07-15,Hotel pre-authorization capture
+ORD-0038,CUST-5259,1347.97,USD,2026-07-26,Card checkout — online store
+ORD-0039,CUST-5154,3279.62,GBP,2026-06-16,Mobile wallet top-up
+ORD-0040,CUST-2571,3667.88,GBP,2026-08-10,Invoice payment
+ORD-0041,CUST-2721,2141.50,USD,2026-07-09,Mobile wallet top-up
+ORD-0042,CUST-7502,2328.73,INR,2026-06-28,Insurance premium debit
+ORD-0043,CUST-6511,2714.95,GBP,2026-06-12,Marketplace payout capture
+ORD-0044,CUST-4892,785.05,USD,2026-06-06,Marketplace payout capture
+ORD-0045,CUST-4273,2185.36,EUR,2026-07-20,Insurance premium debit
+ORD-0046,CUST-7587,4093.66,INR,2026-06-29,Invoice payment
+ORD-0047,CUST-8515,3661.08,INR,2026-06-07,Marketplace payout capture
+ORD-0048,CUST-7804,4993.44,INR,2026-08-04,Utility bill payment
+ORD-0049,CUST-7273,2372.16,GBP,2026-07-02,Mobile wallet top-up
+ORD-0050,CUST-3225,2318.69,USD,2026-07-07,Marketplace payout capture
+ORD-0051,CUST-6786,803.28,EUR,2026-07-20,Invoice payment
+ORD-0052,CUST-2694,2857.34,INR,2026-07-24,Card checkout — online store
+ORD-0053,CUST-8722,4504.24,INR,2026-08-01,Card checkout — online store
+ORD-0054,CUST-3235,2834.32,EUR,2026-08-02,Marketplace payout capture
+ORD-0055,CUST-8532,1774.78,INR,2026-06-22,Insurance premium debit
+ORD-0056,CUST-2111,3115.72,USD,2026-06-11,Utility bill payment
+ORD-0057,CUST-3764,1728.77,EUR,2026-07-29,Hotel pre-authorization capture
+ORD-0058,CUST-7136,1335.12,USD,2026-07-31,Card checkout — online store
+ORD-0059,CUST-8779,3421.12,USD,2026-06-06,Card checkout — online store
+ORD-0060,CUST-5620,1263.16,EUR,2026-07-31,Monthly SaaS subscription
+ORD-0061,CUST-1885,892.19,USD,2026-06-21,Mobile wallet top-up
+ORD-0062,CUST-4249,3046.47,USD,2026-07-10,Utility bill payment
+ORD-0063,CUST-3844,3667.79,GBP,2026-06-16,Card checkout — online store
+ORD-0064,CUST-7736,2665.19,GBP,2026-06-02,Utility bill payment
+ORD-0065,CUST-7011,3720.83,EUR,2026-07-26,Invoice payment
+ORD-0066,CUST-8222,1702.30,EUR,2026-06-12,Mobile wallet top-up
+ORD-0067,CUST-5049,3212.39,INR,2026-07-14,Card checkout — online store
+ORD-0068,CUST-5232,1796.85,GBP,2026-07-06,Card checkout — online store
+ORD-0069,CUST-4671,2923.22,EUR,2026-07-31,Insurance premium debit
+ORD-0070,CUST-4485,1617.90,GBP,2026-07-31,Hotel pre-authorization capture
+ORD-0071,CUST-1988,1432.88,GBP,2026-07-03,Marketplace payout capture
+ORD-0072,CUST-6935,1016.72,EUR,2026-08-01,Mobile wallet top-up
+ORD-0073,CUST-3956,4377.87,EUR,2026-07-08,Marketplace payout capture
+ORD-0074,CUST-6713,251.13,USD,2026-08-10,Mobile wallet top-up
+ORD-0075,CUST-8149,4962.24,EUR,2026-08-02,Monthly SaaS subscription
+ORD-0076,CUST-3068,2321.82,GBP,2026-06-24,Card checkout — online store
+ORD-0077,CUST-2242,2113.36,INR,2026-06-10,Card checkout — online store
+ORD-0078,CUST-4690,2938.40,INR,2026-06-29,Utility bill payment
+ORD-0079,CUST-3167,3208.72,USD,2026-06-27,Marketplace payout capture
+ORD-0080,CUST-4346,923.78,USD,2026-06-21,Card checkout — online store
+ORD-0081,CUST-6631,3718.98,GBP,2026-07-29,Monthly SaaS subscription
+ORD-0082,CUST-4482,1236.31,GBP,2026-08-15,Marketplace payout capture
+ORD-0083,CUST-2359,4346.42,EUR,2026-06-10,Card checkout — online store
+ORD-0084,CUST-5099,3623.15,GBP,2026-07-22,Mobile wallet top-up
+ORD-0085,CUST-5899,2843.55,INR,2026-07-27,Monthly SaaS subscription
+ORD-0086,CUST-7264,148.10,USD,2026-06-30,Card checkout — online store
+ORD-0087,CUST-8504,4013.38,EUR,2026-07-31,Insurance premium debit
+ORD-0088,CUST-6200,1470.84,EUR,2026-08-14,Utility bill payment
+ORD-0089,CUST-4372,1695.76,USD,2026-06-21,Hotel pre-authorization capture
+ORD-0090,CUST-3648,2397.09,USD,2026-07-11,Mobile wallet top-up
+ORD-0091,CUST-2536,3460.53,INR,2026-07-23,Card checkout — online store
+ORD-0092,CUST-5499,3997.03,USD,2026-06-27,Mobile wallet top-up
+ORD-0093,CUST-3545,649.12,USD,2026-07-01,Invoice payment
+ORD-0094,CUST-6306,1190.57,USD,2026-07-30,Monthly SaaS subscription
+ORD-0095,CUST-4741,2190.86, ,2026-07-31,Marketplace payout capture
+ORD-0096,CUST-7329,4845.74,EUR,2026-06-09,Mobile wallet top-up
+ORD-0097,CUST-7860,4314.54,USD,2026-07-07,Mobile wallet top-up
+ORD-0098,CUST-5521,2353.69,INR,2026-07-15,Hotel pre-authorization capture
+ORD-0099,CUST-2913,4571.71,EUR,2026-07-01,Utility bill payment
+ORD-0100,CUST-5057,3709.92,INR,2026-07-20,Invoice payment
+ORD-0101,CUST-1125,4595.77,INR,2026-06-13,Insurance premium debit
+ORD-0102,CUST-7982,1787.53,INR,2026-06-11,Hotel pre-authorization capture
+ORD-0103,CUST-6058,3298.73,INR,2026-08-09,Card checkout — online store
+ORD-0104,CUST-7228,3927.70,USD,2026-07-26,Monthly SaaS subscription
+ORD-0105,CUST-3657,884.73,GBP,2026-06-04,Card checkout — online store
+ORD-0106,CUST-5636,2270.53,EUR,2026-07-02,Utility bill payment
+ORD-0107,CUST-8477,426.52,INR,2026-07-01,Insurance premium debit
+ORD-0108,CUST-8382,2421.97,GBP,2026-06-02,Insurance premium debit
+ORD-0109,CUST-6234,2328.43,GBP,2026-08-15,Mobile wallet top-up
+ORD-0110,CUST-2943,1056.97,INR,2026-08-01,Monthly SaaS subscription
+ORD-0111,CUST-3248,3678.73,GBP,2026-06-03,Utility bill payment
+ORD-0112,CUST-5973,4786.75,INR,2026-07-07,Marketplace payout capture
+ORD-0113,CUST-3530,3973.90,EUR,2026-06-13,Card checkout — online store
+ORD-0114,CUST-2438,485.05,GBP,2026-07-12,Utility bill payment
+ORD-0115,CUST-8487,2795.69,GBP,2026-06-22,Mobile wallet top-up
+ORD-0116,CUST-8923,407.28,EUR,2026-06-29,Utility bill payment
+ORD-0117,CUST-4725,85.47,GBP,2026-08-08,Monthly SaaS subscription
+ORD-0118,CUST-4862,4324.33,GBP,2026-06-14,Marketplace payout capture
+ORD-0119,CUST-8449,4811.07,EUR,2026-06-09,Insurance premium debit
+ORD-0120,CUST-5035,745.33,USD,2026-06-05,Mobile wallet top-up
+ORD-0121,CUST-5811,2390.89,GBP,2026-08-09,Utility bill payment
+ORD-0122,CUST-2779,4935.84,GBP,2026-06-05,Hotel pre-authorization capture
+ORD-0123,CUST-1496,3607.43,GBP,2026-08-09,Hotel pre-authorization capture
+ORD-0124,CUST-6256,4988.04,INR,2026-06-12,Marketplace payout capture
+ORD-0125,CUST-2995,3365.28,USD,2026-06-07,Hotel pre-authorization capture
+ORD-0126,CUST-7343,3086.83,EUR,2026-06-30,Hotel pre-authorization capture
+ORD-0127,CUST-7541,4513.02,EUR,2026-06-17,Mobile wallet top-up
+ORD-0128,CUST-1129,1890.72,EUR,2026-08-15,Hotel pre-authorization capture
+ORD-0129,CUST-4672,2770.70,USD,2026-06-09,Insurance premium debit
+ORD-0130,CUST-4702,4091.54,GBP,2026-08-05,Monthly SaaS subscription
+ORD-0131,CUST-7941,2413.96, ,2026-06-08,Insurance premium debit
+ORD-0132,CUST-3638,2582.92,INR,2026-06-10,Monthly SaaS subscription
+ORD-0133,CUST-4716,3285.72,GBP,2026-07-19,Mobile wallet top-up
+ORD-0134,CUST-8275,4483.58,EUR,2026-07-26,Insurance premium debit
+ORD-0135,CUST-3560,2193.48,USD,2026-07-11,Utility bill payment
+ORD-0136,CUST-4537,364.47,USD,2026-06-11,Monthly SaaS subscription
+ORD-0137,CUST-6488,2929.48,USD,2026-08-15,Hotel pre-authorization capture
+ORD-0138,CUST-5734,1520.50,GBP,2026-07-16,Monthly SaaS subscription
+ORD-0139,CUST-2837,2672.80,EUR,2026-06-20,Insurance premium debit
+ORD-0140,CUST-7612,614.82,GBP,2026-08-13,Marketplace payout capture
+ORD-0141,CUST-3238,3205.38,GBP,2026-06-04,Invoice payment
+ORD-0142,CUST-1570,44.51,EUR,2026-06-19,Utility bill payment
+ORD-0143,CUST-4716,3924.27,EUR,2026-07-19,Utility bill payment
+ORD-0144,CUST-2289,4085.35,USD,2026-06-07,Invoice payment
+ORD-0145,CUST-4392,2335.68,INR,2026-08-02,Insurance premium debit
+ORD-0146,CUST-6555,1822.19,INR,2026-06-15,Mobile wallet top-up
+ORD-0147,CUST-1062,250.61,EUR,2026-07-21,Card checkout — online store
+ORD-0148,CUST-5074,1530.03,GBP,2026-06-16,Card checkout — online store
+ORD-0149,CUST-1590,2804.76,EUR,2026-08-04,Hotel pre-authorization capture
+ORD-0150,CUST-5716,110.75,INR,2026-06-10,Hotel pre-authorization capture
