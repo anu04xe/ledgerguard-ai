@@ -18,8 +18,8 @@ class LedgerInvestigator:
     Gemini can request read-only investigation tools.
     Python executes those tools and returns the results.
 
-    The deterministic reconciliation engine remains the
-    source of financial truth.
+    The deterministic reconciliation engine remains the source
+    of financial truth.
     """
 
     def __init__(self, tools: LedgerTools):
@@ -158,8 +158,8 @@ your read-only investigation tools.
 
 IMPORTANT ARCHITECTURE RULES:
 
-The deterministic reconciliation engine is the source
-of truth for financial matching decisions.
+The deterministic reconciliation engine is the source of
+truth for financial matching decisions.
 
 Your job is to investigate and explain the exception,
 not override it.
@@ -219,8 +219,7 @@ CASE:
             )
         ]
 
-        # Limit the agent to four tool rounds to control
-        # API usage and prevent unnecessary wandering.
+        # Limit tool calls to control API usage.
         for _ in range(4):
 
             response = self.client.models.generate_content(
@@ -235,14 +234,12 @@ CASE:
             function_calls = []
 
             for candidate in response.candidates or []:
-
                 content = candidate.content
 
                 if not content:
                     continue
 
                 for part in content.parts or []:
-
                     if part.function_call:
                         function_calls.append(
                             part.function_call
@@ -268,12 +265,13 @@ CASE:
                 try:
                     result = json.loads(text)
 
+                    # Keep trace metadata separate from
+                    # the financial investigation itself.
                     result["_tool_trace"] = tool_trace
 
                     return result
 
                 except json.JSONDecodeError:
-
                     return {
                         "finding": (
                             "AI returned an invalid "
@@ -289,7 +287,7 @@ CASE:
                         "_tool_trace": tool_trace,
                     }
 
-            # Preserve Gemini's function-call response.
+            # Preserve Gemini's function-call message.
             contents.append(
                 response.candidates[0].content
             )
@@ -300,7 +298,7 @@ CASE:
 
                 args = dict(call.args or {})
 
-                result = self._execute_tool(
+                tool_result = self._execute_tool(
                     call.name,
                     args,
                 )
@@ -309,7 +307,7 @@ CASE:
                     {
                         "tool": call.name,
                         "arguments": args,
-                        "result": result,
+                        "result": tool_result,
                     }
                 )
 
@@ -317,13 +315,13 @@ CASE:
                     types.Part.from_function_response(
                         name=call.name,
                         response={
-                            "result": result
+                            "result": tool_result
                         },
                     )
                 )
 
-            # Gemini's function response must be sent
-            # as a supported content role.
+            # Gemini expects the function response
+            # as a user message in this API flow.
             contents.append(
                 types.Content(
                     role="user",

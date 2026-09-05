@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import pandas as pd
 
 from app.data.schemas import (
@@ -36,6 +35,42 @@ def load_data():
     return orders, gateways, settlements
 
 
+def load_ground_truth():
+    """Load ground truth for evaluation only.
+
+    Ground truth is never used by the reconciliation engine.
+    It exists exclusively for measuring system performance.
+    """
+    import math
+    import pandas as pd
+
+    from app.data.schemas import GroundTruthRecord
+
+    path = DATA_DIR / "ground_truth.csv"
+
+    df = pd.read_csv(path)
+
+    records = []
+
+    for row in df.to_dict(orient="records"):
+        cleaned = {}
+
+        for key, value in row.items():
+            if value is None:
+                cleaned[key] = ""
+            elif isinstance(value, float) and math.isnan(value):
+                cleaned[key] = ""
+            else:
+                cleaned[key] = value
+
+        records.append(
+            GroundTruthRecord(**cleaned)
+        )
+
+    return records
+
+
+    
 def main():
     orders, gateways, settlements = load_data()
 
