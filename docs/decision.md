@@ -13,7 +13,6 @@ financial truth.
 
 The AI agent receives only cases that deterministic
 matching cannot confidently resolve.
-
 Reason:
 reduces cost, latency and hallucination surface.
 
