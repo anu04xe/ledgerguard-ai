@@ -12,7 +12,7 @@ if str(ROOT) not in sys.path:
 from app.core.audit import log_investigation
 from app.core.matcher import reconcile_all
 from app.core.run_reconciliation import load_data
-
+from app.agents.tools import LedgerTools
 
 st.set_page_config(
     page_title="LedgerGuard AI",
@@ -37,7 +37,11 @@ results = reconcile_all(
     gateways,
     settlements,
 )
-
+ledger_tools = LedgerTools(
+    orders,
+    gateways,
+    settlements,
+)
 
 # -------------------------------------------------------------------
 # Summary
@@ -233,7 +237,7 @@ else:
 
             try:
 
-                investigator = LedgerInvestigator()
+                investigator = LedgerInvestigator(ledger_tools)
 
                 investigation = investigator.investigate(
                     case
@@ -359,6 +363,40 @@ else:
                     st.write(
                         "No additional evidence reported."
                     )
+                st.subheader("Agent Investigation Trace")
+
+                tool_trace = investigation.get(
+                    "_tool_trace",
+                    [],
+                )
+
+                if tool_trace:
+                    for i, trace in enumerate(tool_trace, start=1):
+                        with st.expander(
+                            f"Step {i}: {trace['tool']}"
+                        ):
+                            st.write("**Arguments**")
+
+                            st.json(
+                                trace.get(
+                                    "arguments",
+                                    {},
+                                )
+                            )
+
+                            st.write("**Tool Result**")
+
+                            st.json(
+                                trace.get(
+                                    "result",
+                                    {},
+                                )
+                            )
+                else:
+                    st.info(
+                        "No tool calls were required."
+                    )
+
 
 
             except Exception as exc:

@@ -3,18 +3,26 @@ import os
 from typing import Any, Dict
 
 from google import genai
+from google.genai import types
+
+from app.agents.tools import LedgerTools
+
+
+MODEL = "gemini-3.6-flash"
 
 
 class LedgerInvestigator:
     """
-    Gemini-powered investigator.
+    Agentic Gemini investigator.
 
-    IMPORTANT:
-    Gemini does not determine financial truth.
-    It analyzes evidence supplied by the deterministic engine.
+    Gemini can request read-only investigation tools.
+    Python executes those tools and returns the results.
+
+    The deterministic reconciliation engine remains the
+    source of financial truth.
     """
 
-    def __init__(self):
+    def __init__(self, tools: LedgerTools):
         api_key = os.getenv("GEMINI_API_KEY")
 
         if not api_key:
@@ -23,22 +31,164 @@ class LedgerInvestigator:
             )
 
         self.client = genai.Client(api_key=api_key)
+        self.tools = tools
 
-    def investigate(self, case: Dict[str, Any]) -> Dict[str, Any]:
+        self.tool_functions = [
+            types.FunctionDeclaration(
+                name="get_order",
+                description=(
+                    "Retrieve the complete order record by order ID."
+                ),
+                parameters=types.Schema(
+                    type=types.Type.OBJECT,
+                    properties={
+                        "order_id": types.Schema(
+                            type=types.Type.STRING,
+                            description="The order ID to inspect.",
+                        )
+                    },
+                    required=["order_id"],
+                ),
+            ),
+            types.FunctionDeclaration(
+                name="get_gateway",
+                description=(
+                    "Retrieve the complete gateway transaction "
+                    "by gateway reference."
+                ),
+                parameters=types.Schema(
+                    type=types.Type.OBJECT,
+                    properties={
+                        "gateway_ref": types.Schema(
+                            type=types.Type.STRING,
+                            description=(
+                                "The gateway reference to inspect."
+                            ),
+                        )
+                    },
+                    required=["gateway_ref"],
+                ),
+            ),
+            types.FunctionDeclaration(
+                name="get_settlement",
+                description=(
+                    "Retrieve a settlement record by settlement ID."
+                ),
+                parameters=types.Schema(
+                    type=types.Type.OBJECT,
+                    properties={
+                        "settlement_id": types.Schema(
+                            type=types.Type.STRING,
+                            description=(
+                                "The settlement ID to inspect."
+                            ),
+                        )
+                    },
+                    required=["settlement_id"],
+                ),
+            ),
+            types.FunctionDeclaration(
+                name="search_settlements",
+                description=(
+                    "Search all settlement records associated "
+                    "with a gateway reference."
+                ),
+                parameters=types.Schema(
+                    type=types.Type.OBJECT,
+                    properties={
+                        "gateway_ref": types.Schema(
+                            type=types.Type.STRING,
+                            description=(
+                                "The gateway reference to search for."
+                            ),
+                        )
+                    },
+                    required=["gateway_ref"],
+                ),
+            ),
+        ]
+
+        self.tool = types.Tool(
+            function_declarations=self.tool_functions
+        )
+
+    def _execute_tool(
+        self,
+        name: str,
+        args: Dict[str, Any],
+    ) -> Any:
+
+        if name == "get_order":
+            return self.tools.get_order(
+                args["order_id"]
+            )
+
+        if name == "get_gateway":
+            return self.tools.get_gateway(
+                args["gateway_ref"]
+            )
+
+        if name == "get_settlement":
+            return self.tools.get_settlement(
+                args["settlement_id"]
+            )
+
+        if name == "search_settlements":
+            return self.tools.search_settlements(
+                args["gateway_ref"]
+            )
+
+        return {
+            "error": f"Unknown tool: {name}"
+        }
+
+    def investigate(
+        self,
+        case: Dict[str, Any],
+    ) -> Dict[str, Any]:
+
+        tool_trace = []
+
         prompt = f"""
-You are LedgerGuard AI, a financial reconciliation investigation agent.
+You are LedgerGuard AI, a financial reconciliation
+investigation agent.
 
-Your job is to investigate an exception using ONLY the evidence provided.
+Investigate the exception using the supplied case and
+your read-only investigation tools.
 
-You MUST NOT invent transactions, IDs, amounts, dates, or evidence.
+IMPORTANT ARCHITECTURE RULES:
 
-You MUST NOT modify financial values.
+The deterministic reconciliation engine is the source
+of truth for financial matching decisions.
 
-You MUST NOT assume that two records match merely because they look similar.
+Your job is to investigate and explain the exception,
+not override it.
 
-Analyze the supplied case and return JSON only.
+The exception field contains the deterministic engine's
+classification.
 
-Required JSON structure:
+Use tools when you need to verify or retrieve
+additional evidence.
+
+You MUST NOT:
+- invent transactions
+- invent IDs
+- invent amounts
+- invent dates
+- modify financial values
+- claim that an exception is a successful match
+- assume missing records exist
+
+Clearly distinguish:
+1. Confirmed facts.
+2. Evidence supporting the exception.
+3. Remaining uncertainty.
+4. Recommended operational action.
+
+Before producing the final answer, investigate the case
+using the available tools when appropriate.
+
+Return JSON only using this structure:
 
 {{
   "finding": "brief conclusion",
@@ -46,65 +196,155 @@ Required JSON structure:
   "confidence": 0.0,
   "recommended_action": "one concrete action",
   "evidence_used": [
-    "specific evidence from the supplied records"
+    "specific evidence actually inspected"
   ],
   "requires_human_review": true
 }}
 
-Rules:
-
-- confidence must be between 0 and 1
-- requires_human_review should be true when the evidence is insufficient
-- distinguish between confirmed facts and plausible explanations
-- never invent missing records
-- never claim a transaction is valid without supporting evidence
-IMPORTANT ARCHITECTURE RULE:
-
-The deterministic reconciliation engine is the source of truth for
-financial matching decisions.
-
-Your role is to investigate and explain the exception, not override
-the reconciliation engine.
-
-The "exception" field represents the deterministic engine's finding.
-
-You must explicitly distinguish:
-1. What the deterministic engine confirmed.
-2. What evidence supports that finding.
-3. What remains uncertain.
-4. What action should be taken.
-
-Never describe an exception as a successful match.
+confidence must be between 0 and 1.
 
 CASE:
 
 {json.dumps(case, indent=2, default=str)}
 """
 
-        response = self.client.models.generate_content(
-            model="gemini-3.6-flash",
-            contents=prompt,
-        )
+        contents = [
+            types.Content(
+                role="user",
+                parts=[
+                    types.Part.from_text(
+                        text=prompt
+                    )
+                ],
+            )
+        ]
 
-        text = response.text.strip()
+        # Limit the agent to four tool rounds to control
+        # API usage and prevent unnecessary wandering.
+        for _ in range(4):
 
-        # Handle accidental markdown fences.
-        if text.startswith("```"):
-            text = text.replace("```json", "")
-            text = text.replace("```", "")
-            text = text.strip()
+            response = self.client.models.generate_content(
+                model=MODEL,
+                contents=contents,
+                config=types.GenerateContentConfig(
+                    tools=[self.tool],
+                    temperature=0.1,
+                ),
+            )
 
-        try:
-            result = json.loads(text)
-        except json.JSONDecodeError:
-            return {
-                "finding": "AI returned an invalid structured response.",
-                "reasoning": text,
-                "confidence": 0.0,
-                "recommended_action": "Human review required.",
-                "evidence_used": [],
-                "requires_human_review": True,
-            }
+            function_calls = []
 
-        return result
+            for candidate in response.candidates or []:
 
+                content = candidate.content
+
+                if not content:
+                    continue
+
+                for part in content.parts or []:
+
+                    if part.function_call:
+                        function_calls.append(
+                            part.function_call
+                        )
+
+            # No tool call means Gemini has produced
+            # its final investigation.
+            if not function_calls:
+
+                text = response.text.strip()
+
+                if text.startswith("```"):
+                    text = text.replace(
+                        "```json",
+                        "",
+                    )
+                    text = text.replace(
+                        "```",
+                        "",
+                    )
+                    text = text.strip()
+
+                try:
+                    result = json.loads(text)
+
+                    result["_tool_trace"] = tool_trace
+
+                    return result
+
+                except json.JSONDecodeError:
+
+                    return {
+                        "finding": (
+                            "AI returned an invalid "
+                            "structured response."
+                        ),
+                        "reasoning": text,
+                        "confidence": 0.0,
+                        "recommended_action": (
+                            "Human review required."
+                        ),
+                        "evidence_used": [],
+                        "requires_human_review": True,
+                        "_tool_trace": tool_trace,
+                    }
+
+            # Preserve Gemini's function-call response.
+            contents.append(
+                response.candidates[0].content
+            )
+
+            tool_parts = []
+
+            for call in function_calls:
+
+                args = dict(call.args or {})
+
+                result = self._execute_tool(
+                    call.name,
+                    args,
+                )
+
+                tool_trace.append(
+                    {
+                        "tool": call.name,
+                        "arguments": args,
+                        "result": result,
+                    }
+                )
+
+                tool_parts.append(
+                    types.Part.from_function_response(
+                        name=call.name,
+                        response={
+                            "result": result
+                        },
+                    )
+                )
+
+            # Gemini's function response must be sent
+            # as a supported content role.
+            contents.append(
+                types.Content(
+                    role="user",
+                    parts=tool_parts,
+                )
+            )
+
+        return {
+            "finding": (
+                "Investigation exceeded the maximum "
+                "number of tool calls."
+            ),
+            "reasoning": (
+                "The investigation was stopped to "
+                "limit agent execution."
+            ),
+            "confidence": 0.0,
+            "recommended_action": (
+                "Human review required."
+            ),
+            "evidence_used": [],
+            "requires_human_review": True,
+            "_tool_trace": tool_trace,
+        }
